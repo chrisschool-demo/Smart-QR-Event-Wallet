@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Wallet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-4">
+    <div id="student-login" class="text-center p-8 bg-white rounded-lg shadow-md">
+        <h1 class="text-2xl font-bold mb-4">Student Login</h1>
+        <p>Please scan your student QR code to view your wallet.</p>
+        <div id="login-scanner" class="w-full max-w-sm mx-auto mt-4 border-2 border-dashed rounded-lg"></div>
+    </div>
+
+    <div id="student-dashboard" class="hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <h1 class="text-2xl font-bold" id="student-name-display"></h1>
+            <p class="text-3xl font-bold mt-2 text-blue-600" id="wallet-balance">₹0.00</p>
+            <button id="recharge-btn" class="mt-4 w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600">Recharge Wallet</button>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <h2 class="text-2xl font-bold mb-4">Stalls & Menu</h2>
+            <div id="stalls-list" class="space-y-4"></div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold mb-4">Your History</h2>
+            <div id="transaction-history" class="h-80 overflow-y-auto space-y-2"></div>
+        </div>
+    </div>
+
+    <div id="recharge-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white p-8 rounded-lg shadow-2xl w-full max-w-sm">
+            <h2 class="text-2xl font-bold mb-4">Recharge Wallet</h2>
+            <label for="recharge-amount" class="block font-medium mb-1">Enter Amount (₹):</label>
+            <input type="number" id="recharge-amount" class="w-full p-2 border rounded" placeholder="e.g., 200">
+            <button id="confirm-recharge-btn" class="w-full mt-4 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">Proceed to Pay</button>
+            <button id="cancel-recharge-btn" class="w-full mt-2 bg-gray-300 py-2 rounded-md hover:bg-gray-400">Cancel</button>
+        </div>
+    </div>
+
+    <script src="/js/html5-qrcode.min.js"></script>
+    <script type="module" src="student.js"></script>
+</body>
+</html>
