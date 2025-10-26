@@ -2,7 +2,7 @@ import { db } from '../firebase-config.js';
 import { collection, addDoc, getDocs, doc, setDoc, query, where, getDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
 
 // --- PASSWORD PROTECTION ---
-const correctPassword = "udaya"; // Change this to a secure password
+const correctPassword = "123"; // Change this to a secure password
 const passwordModal = document.getElementById('password-modal');
 const mainContent = document.getElementById('main-content');
 const loginButton = document.getElementById('login-button');
