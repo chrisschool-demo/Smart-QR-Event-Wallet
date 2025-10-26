@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stall Panel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/js/html5-qrcode.min.js"></script>
+</head>
+<body class="bg-gray-100 p-4">
+    <div id="stall-login" class="text-center p-8 bg-white rounded-lg shadow-md">
+        <h1 class="text-2xl font-bold mb-4">Stall Login</h1>
+        <p>Please scan your stall's QR code to log in.</p>
+        <div id="login-scanner" class="w-full max-w-sm mx-auto mt-4 border-2 border-dashed rounded-lg"></div>
+    </div>
+
+    <div id="stall-dashboard" class="hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <h1 class="text-3xl font-bold" id="stall-name-display"></h1>
+            <p class="text-gray-600">Welcome, manage your sales here.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+            <h2 class="text-2xl font-bold mb-4">Start New Transaction</h2>
+            <p id="scan-instruction" class="text-gray-700 mb-4">Scan a student's QR code to begin.</p>
+            <div id="student-scanner" class="w-full md:w-96 mx-auto border-2 border-dashed rounded-lg"></div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold mb-4">Your Sales</h2>
+            <p class="text-xl font-semibold mb-4">Total Sales: <span id="total-sales" class="text-green-600">₹0.00</span></p>
+            <div id="sales-history" class="h-80 overflow-y-auto space-y-2"></div>
+        </div>
+    </div>
+
+    <div id="transaction-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white p-8 rounded-lg shadow-2xl w-full max-w-md">
+            <h2 class="text-2xl font-bold mb-4">Confirm Purchase</h2>
+            <p class="mb-2">Student: <strong id="modal-student-name"></strong></p>
+            <p class="mb-4">Balance: <strong id="modal-student-balance" class="text-blue-600"></strong></p>
+            
+            <div class="mb-4">
+                <label for="product-select" class="block font-medium mb-1">Select Product/Game:</label>
+                <select id="product-select" class="w-full p-2 border rounded"></select>
+            </div>
+            <div class="mb-4">
+                <label for="quantity-input" class="block font-medium mb-1">Quantity:</label>
+                <input type="number" id="quantity-input" value="1" min="1" class="w-full p-2 border rounded">
+            </div>
+
+            <div class="text-right text-2xl font-bold my-4">
+                Total: <span id="total-amount" class="text-green-600">₹0.00</span>
+            </div>
+            
+            <div class="flex justify-end space-x-4">
+                <button id="cancel-btn" class="px-6 py-2 bg-gray-300 rounded-md hover:bg-gray-400">Cancel</button>
+                <button id="confirm-btn" class="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Confirm</button>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="stall.js"></script>
+</body>
+</html>
