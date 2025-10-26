@@ -1,0 +1,22 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
+
+// Your web app's Firebase configuration (as provided)
+const firebaseConfig = {
+  apiKey: "AIzaSyBNN0fWJISI2T9sqQ1U_T3C8ZO5yGGh6Ug",
+  authDomain: "school-wallet-udaya.firebaseapp.com",
+  projectId: "school-wallet-udaya",
+  storageBucket: "school-wallet-udaya.firebasestorage.app",
+  messagingSenderId: "432765586897",
+  appId: "1:432765586897:web:27239002a2529b152a64f0"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+// Initialize Cloud Firestore and get a reference to the service
+const db = getFirestore(app);
+
+// Export the database connection
+export { db };

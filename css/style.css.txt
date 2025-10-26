@@ -1,0 +1,9 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+/* Add a subtle background pattern */
+body {
+    background-color: #f3f4f6;
+    background-image: radial-gradient(#d1d5db 1px, transparent 1px);
+    background-size: 16px 16px;
+}

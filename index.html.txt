@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart QR Event Wallet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen font-poppins">
+    <div class="w-full max-w-md p-8 space-y-8 bg-white rounded-2xl shadow-lg text-center">
+        <div>
+            <h1 class="text-3xl font-bold text-gray-800">Smart QR Event Wallet</h1>
+            <p class="mt-2 text-gray-600">Welcome to the Udaya Public School Annual Day!</p>
+        </div>
+
+        <div class="space-y-4">
+            <a href="/admin/admin.html" class="block w-full px-4 py-3 text-lg font-semibold text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 transition-transform transform hover:scale-105">
+                Admin Panel
+            </a>
+            <a href="/stall/stall.html" class="block w-full px-4 py-3 text-lg font-semibold text-white bg-green-600 rounded-lg shadow-md hover:bg-green-700 transition-transform transform hover:scale-105">
+                Stall Login
+            </a>
+            <a href="/student/student.html" class="block w-full px-4 py-3 text-lg font-semibold text-white bg-purple-600 rounded-lg shadow-md hover:bg-purple-700 transition-transform transform hover:scale-105">
+                Student Login (Scan QR)
+            </a>
+        </div>
+
+        <div class="mt-6 text-sm text-gray-500">
+            <p>&copy; 2025 Udaya Public School. All Rights Reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
